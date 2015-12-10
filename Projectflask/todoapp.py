@@ -2,10 +2,12 @@ __author__ = 'malcolmbarnes'
 from flask import Flask, render_template, request, redirect
 app= Flask(__name__)
 
+
+todolist= []
 @app.route('/', methods=['GET', 'POST'])
 def toDo():
 
-    return render_template ('index.html', users=[1,2,3])
+    return render_template ('index.html', todolist= todolist)
 
 
 def hello_world():

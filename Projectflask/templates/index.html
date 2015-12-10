@@ -5,12 +5,12 @@
     <title>{{author}} 's App</title>
 </head>
 <>
-{{users}}
+{{todolist}}
 
 <br> List of To Do Items <br>
 <ul>
-    {% for user in users %}
-    <li>{{ user|e }}</li>
+    {% for item in todolist %}
+    <li>{{ item|e }}</li>
     {% endfor %}
 </ul>
 <form action="/submit" method="post">
