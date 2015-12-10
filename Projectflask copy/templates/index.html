@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+< lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{author}} 's App</title>
+</head>
+<>
+{{users}}
+
+<br> List of To Do Items <br>
+<ul>
+    {% for user in users %}
+    <li>{{ user|e }}</li>
+    {% endfor %}
+</ul>
+<form action="/submit" method="post">
+    <input type="text" name="email">Email</input><br>
+    <input type="text" name="task">Task</input><br>
+<select name="priority">
+
+    <option value="low" selected>Low</option>
+    <option value="medium">Medium</option>
+    <option value="high">High</option>
+
+</select>
+
+<input type="submit" value="toDo"></input>
+
+
+
+
+</form>
+
+</body>
+</html>
